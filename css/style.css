@@ -6,3 +6,8 @@ main{
 	background-color: maroon;
 	height: 3000px;
 }
+h1{
+	position: fixed;
+	top: 3rem;
+	left: 5rem;
+}
