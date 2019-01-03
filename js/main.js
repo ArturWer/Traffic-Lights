@@ -5,15 +5,16 @@ var main = function () {
 	let winHEIGHT = window.innerHeight;
 	
 	document.addEventListener("scroll", (e)=>{
-		let delta = (bodyHeight + winHEIGHT) / 3 - window.scrollY;
-		if (delta>2000) {
+		let third = (bodyHeight - winHEIGHT) / 3;
+		if (window.scrollY < third) {
 			main.style.backgroundColor = "red";
-		} else if (delta>1000) {
+		} else if (window.scrollY < 2*third) {
 			main.style.backgroundColor = "yellow";
 		} else {
 			main.style.backgroundColor = "green";
 		}
 		console.log(window.scrollY);
+		console.log(winHEIGHT);
 	});
 	
 	
